@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<varlist name="Settings">
+	<varlist name="MapViewOptions">
+		<varlist name="HF">
+			<string name="IndexedPalette">Monochrome</string>
+		</varlist>
+		<varlist name="WS">
+			<string name="IndexedPalette">Thermal</string>
+		</varlist>
+		<varlist name="SH">
+			<string name="IndexedPalette">InverseBoolean</string>
+		</varlist>
+	</varlist>
+	<varlist name="HF">
+		<int name="nx">512</int>
+		<int name="ny">512</int>
+		<float name="HorizScale">1</float>
+		<bool name="MosaicFlag">false</bool>
+		<int name="MosaicSize">512</int>
+		<string name="Algorithm">InflateDM64</string>
+	</varlist>
+	<bool name="WrapFlag">false</bool>
+	<varlist name="DM">
+		<string name="Algorithm">PeakDM</string>
+		<int name="HF_in_DM">64</int>
+		<int name="nx">8</int>
+		<int name="ny">8</int>
+		<int name="SeaLand">67</int>
+		<int name="FlatSteep">29</int>
+		<int name="FeatureScale">50</int>
+		<int name="FracRough">21</int>
+		<int name="PeakRough">79</int>
+		<int name="Cliffs">31</int>
+		<int name="Erosion">7</int>
+		<int name="Lakes">0</int>
+		<string name="Climate">Temperate</string>
+	</varlist>
+	<varlist name="TX">
+		<bool name="UseLM">false</bool>
+		<bool name="UseTX">true</bool>
+		<bool name="UseStrata">true</bool>
+		<int name="TX_in_HF">2</int>
+		<bool name="MosaicFlag">true</bool>
+		<int name="MosaicSize">512</int>
+		<int name="MaxRadAA">2</int>
+	</varlist>
+	<varlist name="Ops">
+		<bool name="GenDM">true</bool>
+		<bool name="GenHF">true</bool>
+		<bool name="GenAM">true</bool>
+		<bool name="GenTX">true</bool>
+	</varlist>
+	<varlist name="CalcTimers">
+		<varlist name="DM">
+			<float name="GenMap">1.328</float>
+		</varlist>
+		<varlist name="HF">
+			<float name="DesignInflate64">49.297</float>
+		</varlist>
+		<varlist name="AM">
+			<float name="GenMap">6.297</float>
+		</varlist>
+		<varlist name="TX">
+			<float name="GenMap">17.391</float>
+		</varlist>
+	</varlist>
+	<varlist name="Sapphire">
+		<varlist name="TeleportList">		</varlist>
+	</varlist>
+	<int name="SettingsVersion">2540</int>
+</varlist>
