@@ -71,7 +71,7 @@ class PlayerReg(DirectObject): #This class will regulate the players
 			#initialize
 			m.setPlayerNum(self.iterator.getUint8())
 			self.num = self.iterator.getFloat64()
-			for i in range(self.num):
+			for i in range(int(self.num)):
 				if (i != m.playernum):
 					self.playerList.append(Player())
 					self.playerList[i].username = self.iterator.getString()
@@ -86,14 +86,14 @@ class PlayerReg(DirectObject): #This class will regulate the players
 		if (self.type == "update"):
 			self.num = self.iterator.getFloat64()
 			if (self.num > self.numofplayers):
-				for i in range(self.numofplayers):
+				for i in range(int(self.numofplayers)):
 					self.playerList[i].currentPos['x'] = self.iterator.getFloat64()
 					self.playerList[i].currentPos['y'] = self.iterator.getFloat64()
 					self.playerList[i].currentPos['z'] = self.iterator.getFloat64()
 					self.playerList[i].currentPos['h'] = self.iterator.getFloat64()
 					self.playerList[i].currentPos['p'] = self.iterator.getFloat64()
 					self.playerList[i].currentPos['r'] = self.iterator.getFloat64()
-				for i in range(self.numofplayers,self.num):
+				for i in range(int(self.numofplayers),int(self.num)):
 					if (i != m.playernum):
 						self.playerList.append(Player())
 						self.playerList[i].load()
@@ -107,7 +107,7 @@ class PlayerReg(DirectObject): #This class will regulate the players
 						self.playerList.append(Player())
 				self.numofplayers = self.num
 			else:
-				for i in range(self.numofplayers):
+				for i in range(int(self.numofplayers)):
 					self.playerList[i].currentPos['x'] = self.iterator.getFloat64()
 					self.playerList[i].currentPos['y'] = self.iterator.getFloat64()
 					self.playerList[i].currentPos['z'] = self.iterator.getFloat64()
@@ -121,7 +121,7 @@ class PlayerReg(DirectObject): #This class will regulate the players
 	def updatePlayers(self,m):
 		
 		if (self.numofplayers != 0):
-			for k in range(self.numofplayers):
+			for k in range(int(self.numofplayers)):
 				#As long as the player is not the client put it where the server says
 				if(k != m.playernum):
 					self.playerList[k].model.setPosHpr(self.playerList[k].currentPos['x'],self.playerList[k].currentPos['y'],self.playerList[k].currentPos['z'],self.playerList[k].currentPos['h'],self.playerList[k].currentPos['p'],self.playerList[k].currentPos['r'])
