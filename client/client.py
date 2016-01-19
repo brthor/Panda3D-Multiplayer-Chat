@@ -147,14 +147,14 @@ class Me(DirectObject):
     #STORE TERRAIN SCALE FOR LATER USE#
     self.terrainScale = terrainClass.terrain.getRoot().getSz()
     base.camera.reparentTo(self.model)
+    self.camDummy = self.model.attachNewNode("camDummy")
+    self.camDummy.setZ(5)
   def setPlayerNum(self,int):
     self.playernum = int
    
   def move(self, keyClass, terrainClass):
     #self.meTerrainHeight = terrainClass.terrain.getElevation(self.model.getX(),self.model.getY()) * self.terrainScale
     #self.camTerrainHeight = terrainClass.terrain.getElevation(camera.getX(),camera.getY()) * self.terrainScale
-    self.camDummy = self.model.attachNewNode("camDummy")
-    self.camDummy.setZ(5)
     self.elapsed = globalClock.getDt()
     #base.camera.lookAt(self.actorHead)
     if (keyClass.keyMap["left"]!=0):
