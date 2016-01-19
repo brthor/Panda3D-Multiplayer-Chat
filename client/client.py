@@ -34,7 +34,7 @@ class Client(DirectObject):
 class Terrain(GeoMipTerrain):
   def __init__(self):
     self.terrain = GeoMipTerrain("mySimpleTerrain")
-    self.terrain.setHeightfield(Filename("heightmap.png"))
+    self.terrain.setHeightfield(Filename("Heightmap.png"))
     self.terrain.setColorMap(Filename("terrain.bmp"))  #pjb comment this line out if you want to set texture directly
     #myTexture = loader.loadTexture("terrain.bmp") #pjb UNcomment this line out if you want to set texture directly
     self.terrain.setBlockSize(32)
